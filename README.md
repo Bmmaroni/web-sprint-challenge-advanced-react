@@ -30,13 +30,35 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+The basic steps for building a stateful class component are Class, Constructor and Render/Return. Declare your class and extend 'React.Component', add a constructor() and add your state within and then use the render() function to return your component.
+
 2. Describe the different phases of the component lifecycle.
+
+A component has three phases within its lifecycle.
+Mounting: also called the birth phase, the component is built out from scratch and has our initial data.
+Updating: also called the growth phase, our data can be updated during this phase by seeing a change in state.
+Un-mounting: also called the death phase, the component is removed from the screen.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+Constructor: creates the component and uses state to do so.
+Render: the render method is required; returns what our component looks like to the screen and it is called during Mounting and Updating.
+componentDidMount: a method where we can call 'setState' and makes changes to force a re-render of our initial render.
+componentDidUpdate: a method used to make changes to state data after the component has been rendered; has access to previous props and state.
+componentWillUnmount: can be called right after component has been removed; used to tidy up any traces of the component we added in the mount.
+
 4. Define stateful logic.
 
+Stateful logic is hooks we create to carry and distribute state in a general sense that can then be used inside of a component in a more specific way pertaining to that component itself while another component could have a different version of state but have the same structure.
+
 5. Describe how to test a React component with React Testing Library.
+
+We can test a React component with React Testing Library by using three steps as a guide.
+  Arrange: here we would need to render in our component after we have created a new test which we would title to be specific to what we are testing and then we can run our anonymous function.
+  
+  Act: we select the specific points in our component we want to test- for example "(const header = screen.getByText('Header Text'));"
+
+  Assert: we take the point we have selected and apply our assertions to them in order to complete or fail our tests - ex - "expect(header).toBeInTheDocument();"
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
